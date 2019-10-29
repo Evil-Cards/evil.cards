@@ -1,0 +1,136 @@
+TL;SouldHaveRead: So someone let you run a meeting… go
+		New Business: Assign ToDo, Due Date, Members
+		Completed Cards: Move to Complete, Congratulate Members
+		Move Unplanned Work: Sort by Date, move cards forward.
+		Card Master should bang the gavel.  Release to Recess.
+
+		Button to filter - “Due date marked as complete”
+		<details>
+			<summary>Super Villains</summary>
+				<div>Super Villains Help Meetings Run
+				Super Villains can be team leads, or any team member that likes organizing things.  Ideally, a team should have multiple card masters, and rotate them from cycle to cycle.</div>
+		</details>
+		<details>
+			<summary>Super Villian Responsibilities</summary>
+				Running the pre-standup Meta
+				What went well last time?
+				What can we do better?
+				What does work generally look like this cycle? (Load, etc)
+				Ensure Blocked cards have clear unblock Task.
+				Resolving as much scut work as possible prior to the meeting.
+				Recording load on each Responsibility Lane from week to week
+				Protector of the realm (but mostly everyone's time)
+				Responsible for starting the meeting on time and ending as quickly as possible.
+				Trains other Card Masters - The more the better!
+		</details>
+		<details>
+			<summary>Lanes</summary>
+			New Business - “Unrefined material” - Must have a potential due date.
+			Announcements for the next meeting
+			Problems with no defined solution
+			Unidentified “complaints” 
+			Unplanned - “Work that has been touched and defined but not been assigned”
+			Contains a due-date, at least 1 associated team member, goals that can be completed in 1 “cycle” - where a cycle is defined as the time between team standups.
+			Blocked - Blocked items cannot be actioned until the block is resolved.
+			Blocked card must have a clearly defined unblock task
+			Possibly send alerts to slack / notify team or manager
+			Responsibility Lanes (Planned Work) - “Lane per group, for defining workload”
+			Workload should be broken out by generalized types of work done by the team.
+			On an assembly line you might separate bolting parts together from painting the car.
+			Capacity of lane should be estimated by 
+			$number_of_workers * $work_they_can_reasonably complete_in_a_cycle
+			Tracked but not Blocking Lane(s) - “Lane per project or team which is not blocking”
+			Kept for information or progress such as Onboarding and Offboarding.
+			Complete - “Finished and kept in a lane for the month until it is archived”
+			Cards need somewhere to go after they’re completed.
+		</details>
+		<details>
+			<summary>Implicit Rules</summary>
+			All work enters at the New Business lane.
+			All work moves between lanes during a standup*
+			Transactions are not Work.
+
+			* It’s OK to add comments, change members and provide possible solutions to cards, but NOT ok to move them between meetings.  All cards should move through lanes at the standup.
+		</details>	
+		<details>
+			<summary>The Process</summary>
+			
+
+			The Process
+			Users populate to the New Business between cycles
+			Card Master for the week reviews lanes before meeting.
+			Looking for missing information on New Business items
+			Comparing unplanned work for the coming week to estimated capacity in each lane.
+			Pushing unplanned work due dates where possible
+			Following up with team members individually to fix placeholder cards and confirm changes in 
+			Clear any cards in New Business
+			Determine if a card is:
+			Announcement (No action needed)
+			Complaint (Card should be reworked)
+			See “1-minute redirect”
+			A Transaction - Transactions are problems with well defined solutions.  These should not be processed.
+			Problem (Solutions should be suggested!)
+			Collaborate solutions to the card
+			Define the problem as well as possible
+			Brainstorm a TODO list of items that can be completed in a cycle
+			Now is NOT the time to solve the problem
+			See “1-minute goals”
+			$ESTIMATE_POKER_PLACEHOLDER
+			Move to Unplanned
+			Move any finished cards to Complete
+			Review cards marked as completed
+			This is a chance for discussion and praise
+			See 1-minute manager “1 minute praise”
+			As part of the review of completed work - 
+			Consider any new work that resulted.
+			Consider if this class of problem can now be transactional
+			  See “Andon cord”
+			Review work Planned for the current cycle
+			Determine if work is blocked
+			Determine if work is expected to be completed by the start of next cycle, or if due date needs to be updated.
+			Team member responsible for the card should ultimately determine the timeline. 
+			External pressures such as other work that is blocked or external deadlines should be considered.
+			Any card with a new due date past the next cycle, should be moved back to Unplanned.
+			Ensure all cards have a touch / comment / due date adjustment by end of cycle.
+
+			Drain Unplanned work due before next cycle
+			Move any work due within the next cycle to the appropriate lane
+			Decide if any lane is overloaded, adjust if possible
+
+			End the Meeting.
+			There should be a defined and concise step to end the meeting.
+			This prevents end of meeting add-ons and off topic discussion. 
+			Team building is great - but stand-ups aren't the time.
+		</details>
+		<details>
+			<summary>Exceptions</summary>
+			Stale Cards and Punts
+			Stale cards, sometimes the result of punts, are cards that perpetually miss completion.
+
+			Punts occur when a card is promised, but moved to a future date without being blocked. 
+			Punts occur during the planning meeting for the next cycle, or the current cycle review.
+			If a card is punted ahead of the next cycle, it should be moved back to unplanned.
+
+			The goal of a cardmaster, as well as a team, is to keep the unplanned work lane as small as possible. At the same time, the bar for adding unplanned work by any team member should be low; team members should never feel they have to defend their card past the first occasion of new business. 
+
+			Suggested stale card resolution practices:
+			Just as the team member(s) presenting a card should be responsible for completion, only team members involved with a card should be responsible for archiving or removal of stale cards. 
+			At the start of a planning cycle meeting - ask team members to tag for archive any card they submitted that they feel no longer needs to be addressed.
+			Important note: Team members should not archive other members submissions.
+			Create a custom field for “Times Punted” - force review after 3 punts
+			Metrics of interest from punted cards:
+			Punts per week could indicate a busy or overly ambitious week.
+			Cards with 3 or more punts could indicate a poorly defined work item.
+
+			Thoughts for next time
+		</details>
+		<details>
+			<summary>Tools</summary>
+			Trello
+			A ticket system
+			https://chrome.google.com/webstore/detail/original-card-counter-for/ggamggchfpnmhmkeicjgpedgjcllcefp
+		</details>
+		<details>
+			<summary>References</summary>
+			
+		</details>
