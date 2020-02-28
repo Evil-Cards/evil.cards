@@ -4,7 +4,7 @@ GIT_VERSION=$(shell (git rev-parse HEAD 2>/dev/null || echo "${BUILD_VCS_NUMBER}
 PWD=$(shell pwd)
 BUCKET_BASE=~/.buckets
 BUCKET_PATH=$(BUCKET_BASE)/$(APP_NAME)
-
+APP_SERVER= $(shell which dev_appserver.py)
 # https://www.palettable.io/17192E-4C4C4E-92187B-E6C242-DF1B1B
 clean:
 	# Removes all files generated during setup, returning the repository to only checked in and gitignored files.
@@ -20,7 +20,7 @@ dev: clean
 	# https://cloud.google.com/appengine/docs/standard/python/tools/local-devserver-command
 	# https://stackoverflow.com/questions/47988810
 	# keep? --env_var APPLICATION_ID=it-cron
-	dev_appserver.py $(PWD)/default/app.yaml -A=$(APP_NAME) --host=localhost --log_level info --support_datastore_emulator=true  --clear_datastore --datastore_emulator_port 8081 --default_gcs_bucket_name $(APP_NAME).appspot.com --storage_path=$(BUCKET_PATH) --enable_console --enable_host_checking=false
+	python2 $(APP_SERVER) $(PWD)/default/app.yaml -A=$(APP_NAME) --host=localhost --log_level info  --clear_datastore  --default_gcs_bucket_name $(APP_NAME).appspot.com --storage_path=$(BUCKET_PATH) --enable_console --enable_host_checking=false
 
 datastore_clear:
 	dev_appserver.py --clear_datastore=yes app.yaml
@@ -53,7 +53,7 @@ release:
 	# gcloud components update -q
 	gcloud app deploy default/app.yaml --project $(APP_NAME) --version $(GIT_VERSION) --verbosity info
 	# gcloud app deploy default/cron.yaml --project $(APP_NAME) --version $(GIT_VERSION) --verbosity info
-	
+
 	# remove unused indexes
 	#gcloud datastore indexes cleanup index.yaml --project $(APP_NAME) --quiet --verbosity info
 	# updates indexes
