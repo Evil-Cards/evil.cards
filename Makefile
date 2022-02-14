@@ -77,3 +77,10 @@ setup:
 	gcloud components update ; \
 	gcloud init ; \
 	fi
+
+
+build:
+	docker-compose build
+
+dev:
+	docker-compose up
